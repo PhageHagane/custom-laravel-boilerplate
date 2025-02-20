@@ -3,7 +3,7 @@
 @section('title', app_name() . ' | ' . __('backend_permissions.labels.management'))
 
 @section('breadcrumb-links')
-    @include('backend.permission.includes.breadcrumb-links')
+@include('backend.permission.includes.breadcrumb-links')
 @endsection
 
 @section('content')
@@ -26,7 +26,9 @@
                     <table id="permissions_table" class="table">
                         <thead>
                             <tr>
-                                <th>@lang('backend_permissions.table.name')</th>
+                                <th>Permission</th>
+                                <th>Name</th>
+                                <th>Guard Name</th>
                                 <th style="width:0%">@lang('backend_permissions.table.actions')</th>
                             </tr>
                         </thead>
@@ -85,8 +87,16 @@
             pageLength: 10,
             ajax: "{{ route('admin.permissions.index') }}",
             columns: [{
+                    data: 'description',
+                    name: 'description'
+                },
+                {
                     data: 'name',
                     name: 'name'
+                },
+                {
+                    data: 'guard_name',
+                    name: 'guard_name'
                 },
                 {
                     data: 'action',

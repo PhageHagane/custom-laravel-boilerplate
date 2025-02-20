@@ -50,13 +50,13 @@ class PermissionController extends Controller
                 $query = Permission::selectRaw('permissions.*');
 
                 return DataTables::of($query)
-                    ->editColumn('name', function ($row) {
-                        return '<span class="sortable"><a href="' . route('admin.permissions.show', $row) . '">' . $row->name . "</a></span>";
+                    ->editColumn('description', function ($row) {
+                        return '<span class="sortable"><a href="' . route('admin.permissions.show', $row) . '">' . $row->description . "</a></span>";
                     })
                     ->addColumn('action', function ($row) {
                         return $row->getActionButtonsAttribute();
                     })
-                    ->rawColumns(['name','action'])
+                    ->rawColumns(['description','action'])
                     ->make(true);
             }
         }
