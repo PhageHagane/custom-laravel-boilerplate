@@ -91,7 +91,13 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 @import "~tempusdominus-bootstrap-4/src/sass/_tempusdominus-bootstrap-4";
 ```
 
-### 6. Start the Development Server
+### 6. Start the NPM Watcher
+
+```sh
+npm run watch
+```
+
+### 7. Start the Development Server
 
 ```sh
 php artisan serve
