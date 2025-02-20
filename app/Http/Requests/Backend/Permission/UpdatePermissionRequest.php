@@ -17,11 +17,7 @@ class UpdatePermissionRequest extends FormRequest
      */
     public function authorize()
     {
-        if ($this->user()->isAdmin() || $this->user()->can('edit permission')) {
-            return true;
-        }else{
-            return redirect()->route(home_route());
-        }
+        return $this->user()->isAdmin() || $this->user()->can('edit permissions');
     }
 
     /**
