@@ -16,10 +16,11 @@ Laravel Boilerplate 6.0.5 provides developers with a robust starting point for b
 
 ## Installation
 
-### 1. Clone the Repository
+### 1. Download the Repository
+
+Download the repository through this link: [Laravel Boilerplate v6.0.5](https://github.com/rappasoft/laravel-boilerplate/archive/refs/tags/v6.0.5.zip) and extract the contents.
 
 ```sh
-git clone https://github.com/your-repo/laravel-boilerplate.git
 cd laravel-boilerplate
 ```
 
