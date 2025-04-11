@@ -56,55 +56,13 @@ php artisan migrate --seed
 php artisan storage:link
 ```
 
-### 5. Configuration Updates
-
-#### config/app.php
-
-```php
-'providers' => [
-    ...
-    Yajra\DataTables\DataTablesServiceProvider::class,
-],
-
-'aliases' => [
-    ...
-    'Datatables' => Yajra\DataTables\Facades\DataTables::class,
-],
-```
-
-#### resources/js/backend/app.js
-
-```js
-// datatables
-import "datatables.net-bs4";
-require("datatables.net-buttons-bs4");
-import "datatables.net-responsive-bs4";
-import "datatables.net-buttons/js/buttons.colVis.min";
-import "datatables.net-buttons/js/dataTables.buttons.min";
-import "datatables.net-buttons/js/buttons.flash.min";
-import "datatables.net-buttons/js/buttons.html5.min";
-import "datatables.net-buttons/js/buttons.print.min";
-import pdfMake from "pdfmake/build/pdfmake";
-import pdfFonts from "pdfmake/build/vfs_fonts";
-import jsZip from "jszip";
-window.JSZip = jsZip;
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
-```
-
-#### resources/sass/backend/app.scss
-
-```scss
-@import '~datatables.net-bs4/css/dataTables.bootstrap4.css';
-@import "~tempusdominus-bootstrap-4/src/sass/_tempusdominus-bootstrap-4";
-```
-
-### 6. Start the NPM Watcher
+### 5. Start the NPM Watcher
 
 ```sh
 npm run watch
 ```
 
-### 7. Start the Development Server
+### 6. Start the Development Server
 
 ```sh
 php artisan serve
