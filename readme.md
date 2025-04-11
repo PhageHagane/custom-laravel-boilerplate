@@ -28,11 +28,7 @@ cd laravel-boilerplate
 
 ```sh
 composer install
-composer config repositories.phagehagane-l5b-crud vcs https://github.com/PhageHagane/l5b-crud/
-composer require yajra/laravel-datatables-buttons:^4.10 yajra/laravel-datatables-oracle:^9.14 laravel/helpers pqrs/l5b-crud dev-master
 npm install
-npm install datatables.net-bs4@^1.10.22 datatables.net-responsive-bs4@^2.2.6 jszip@^3.5.0 pdfmake@^0.1.68 tempusdominus-bootstrap-4@^5.1.2 --save
-npm install datatables.net-buttons-bs4@^1.7.1 --save-dev
 ```
 
 ### 3. Configure the Application
